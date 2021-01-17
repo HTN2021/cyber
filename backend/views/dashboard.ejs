@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>This is the main dashboard!!!</h1>
+    <p><%- user.name %></p>
+    <a href="/user/sign-out">Sign Out</a>
+
+    <form action="/post/create" method="post">
+        <input type="text" name="content" id="content" placeholder="Post Your Experience Here....">
+        <input type="submit" value="Post">
+    </form>
+
+<% for (post of posts) { %> 
+    <%= post.content %>
+    <br>
+<% } %>
+
+
+</body>
+</html>
