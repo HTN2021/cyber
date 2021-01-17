@@ -1,14 +1,14 @@
-import React, { useState, Fragment } from 'react';
-import { Row, Col, Drawer } from 'antd';
-import { Link } from 'react-router-dom';
-import { CSSTransition } from 'react-transition-group';
-import { withTranslation } from 'react-i18next';
-import loadable from '@loadable/component';
+import React, { useState, Fragment } from "react";
+import { Row, Col, Drawer } from "antd";
+import { Link } from "react-router-dom";
+import { CSSTransition } from "react-transition-group";
+import { withTranslation } from "react-i18next";
+import loadable from "@loadable/component";
 
-import * as S from './styles';
+import * as S from "./styles";
 
-const SvgIcon = loadable(() => import('../../common/SvgIcon'));
-const Button = loadable(() => import('../../common/Button'));
+const SvgIcon = loadable(() => import("../../common/SvgIcon"));
+const Button = loadable(() => import("../../common/Button"));
 
 const Header = ({ t }) => {
   const [isNavVisible] = useState(false);
@@ -27,18 +27,18 @@ const Header = ({ t }) => {
     return (
       <Fragment>
         <S.CustomNavLinkSmall>
-          <Link to="#introduction">{t('About')}</Link>
+          <Link to="#introduction">{t("About")}</Link>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall>
-          <Link to="#secondBlock">{t('Mission')}</Link>
+          <Link to="#secondBlock">{t("Mission")}</Link>
         </S.CustomNavLinkSmall>
         <S.CustomNavLinkSmall>
-          <Link to="#thirdBlock">{t('What we Do')}</Link>
+          <Link to="#thirdBlock">{t("What we Do")}</Link>
         </S.CustomNavLinkSmall>
-        <S.CustomNavLinkSmall style={{ width: '180px' }}>
-          <Link to="/"> 
-          {/*ADD LINK to the login page*/}
-            <Button>{t('Login/Sign up')}</Button>
+        <S.CustomNavLinkSmall style={{ width: "180px" }}>
+          <Link to="/login">
+            {/*ADD LINK to the login page*/}
+            <Button>{t("Login/Sign up")}</Button>
           </Link>
         </S.CustomNavLinkSmall>
       </Fragment>
@@ -66,7 +66,7 @@ const Header = ({ t }) => {
           unmountOnExit
         >
           <Drawer closable={false} visible={visible} onClose={onClose}>
-            <Col style={{ marginBottom: '2.5rem' }}>
+            <Col style={{ marginBottom: "2.5rem" }}>
               <S.Label onClick={onClose}>
                 <Col span={12}>
                   <S.Menu>Menu</S.Menu>
